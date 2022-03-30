@@ -1,0 +1,237 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Permanent+Marker&display=swap');
+
+//mixin
+@mixin container($padding,$margin,$grid){
+    padding: $padding ;
+    margin: $margin;
+    grid-area: $grid;
+    
+}
+    
+
+
+
+
+
+
+
+
+:root {
+    --theme-color: white;
+    --primary-color: #124f88;
+    --secundary-color: #F7C331;
+    --text-color-inverse: white;
+    --text-color: black;
+    --navbar-shallow-color: #e5e5e5;
+    --menu-mobile-background-color: #3A4460;
+  }
+
+  //grid
+  .grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template:
+      "header"  100px
+      "navbar"  50px
+      "main"    auto
+      "sidebar" 100px
+      "footer"  100px;
+      .grid-container > * {
+          @include container(10px,none ,none )
+        box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 4px;
+        text-align: center;
+      }
+  }
+
+
+//termina grid
+
+
+html{
+    height: 100%;
+}
+
+//inicia body
+body{
+
+    font-family: $font-family;
+    font-size: 1.2rem;
+    min-height: 100%;
+      background-image: url('../img/background.jpg');
+
+    p{
+       
+        text-align: center;
+        padding: 0%;
+        color: $color-p;
+        font-weight: 300;
+        font-size: 2rem;
+        font-family: $font-3;
+        line-height: 2.2rem;
+    }
+    h1{
+        font-size: 4rem;
+        color: $color-h1;
+        text-align: center;
+    }
+    
+    
+ //inicia nav
+nav{
+    grid-area: navbar;
+    
+
+    div{
+        background-color: $color-h1;
+        
+        a{
+            .nav div a:hover{
+                cursor: pointer;
+            
+                transition: .5s ;
+                font-weight: 600;
+                
+                }
+           
+            img{
+
+            }
+
+        }
+    }
+    div{
+        ul{
+            li{
+                    button {
+                        color: $color-h1;
+                        padding: 15px 32px;
+                        margin: 4px 7px;
+                        font-size: 18px;
+                        border-radius: 6em;
+                        background: $color-h1;
+                        border: 1px solid $color-p;
+                        transition: all .3s;
+                        box-shadow: 6px 6px 12px $color-p,
+                                    -6px -6px 12px $color-p;
+                                    
+                       }
+                       
+                       button:hover {
+                        border: 1px solid $color-p;
+                       }
+                       
+                       button:active {
+                        box-shadow: 4px 4px 12px $color-p,
+                                    -4px -4px 12px $color-p;
+                       }
+                       a{
+                        
+                       }
+                       
+                       
+
+
+                    
+
+                }
+
+                
+                 
+
+            }
+        }
+    }
+}
+//termina nav
+
+
+//inicia section
+
+section{
+    article{
+        h1{
+            font-size: 4rem;
+            
+            font-family:$font-2;
+        }
+
+            
+
+        }
+      
+       
+    }
+
+//termina section
+
+
+//inicia footer
+.footer{
+    @include container(0%,auto ,footer )
+  background-color: $color-background;
+  .pie{
+	/*padding*/
+	padding: 30px; 
+	color:$color-p; 
+}
+
+.pie__icon--sm{
+	/*size*/
+	width: 30px;  /*ancho*/
+}
+
+.pie__titulo--md{
+	/*display*/
+	display: inline-block;
+	margin-right: 20px;
+	font-size: 2rem;
+}
+
+.pie a{
+	text-decoration: none; }
+    text-align: center;
+}
+
+    h3{
+        text-align: center;
+        padding: 0%;
+        font-size: 2rem;
+        color: $color-h1;
+        
+        a{
+            
+            img{
+                display:block;
+                margin:auto;
+                
+
+            }
+        }
+    }
+
+//termina footer
+
+
+//mobile
+@media screen and (max-width: 700px) {
+    header{
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+     }
+     header .logo{
+        width: 100px; height: 100px;
+        background-color: $color-background;
+    
+    }
+    
+    header .nav-container{
+        height: 40%;
+        width: 100%;
+        background-color: $color-background;
+    }
+    }
+
+//termina body

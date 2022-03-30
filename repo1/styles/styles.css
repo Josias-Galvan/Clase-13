@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Permanent+Marker&display=swap");
+:root {
+  --theme-color: white;
+  --primary-color: #124f88;
+  --secundary-color: #F7C331;
+  --text-color-inverse: white;
+  --text-color: black;
+  --navbar-shallow-color: #e5e5e5;
+  --menu-mobile-background-color: #3A4460;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+  grid-template: "header"  100px "navbar"  50px "main"    auto "sidebar" 100px "footer"  100px;
+}
+
+.grid-container .grid-container > * {
+  padding: 10px;
+  margin: none;
+  grid-area: none;
+  -webkit-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  text-align: center;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+  background-image: url("../img/background.jpg");
+}
+
+body p {
+  text-align: center;
+  padding: 0%;
+  color: white;
+  font-weight: 300;
+  font-size: 2rem;
+  font-family: "Permanent Marker";
+  line-height: 2.2rem;
+}
+
+body h1 {
+  font-size: 4rem;
+  color: #38c596;
+  text-align: center;
+}
+
+body nav {
+  grid-area: navbar;
+}
+
+body nav div {
+  background-color: #38c596;
+}
+
+body nav div a .nav div a:hover {
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-weight: 600;
+}
+
+body nav div ul li button {
+  color: #38c596;
+  padding: 15px 32px;
+  margin: 4px 7px;
+  font-size: 18px;
+  border-radius: 6em;
+  background: #38c596;
+  border: 1px solid white;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-box-shadow: 6px 6px 12px white, -6px -6px 12px white;
+          box-shadow: 6px 6px 12px white, -6px -6px 12px white;
+}
+
+body nav div ul li button:hover {
+  border: 1px solid white;
+}
+
+body nav div ul li button:active {
+  -webkit-box-shadow: 4px 4px 12px white, -4px -4px 12px white;
+          box-shadow: 4px 4px 12px white, -4px -4px 12px white;
+}
+
+section article h1 {
+  font-size: 4rem;
+  font-family: "Oxygen", sans-serif;
+}
+
+.footer {
+  padding: 0%;
+  margin: auto;
+  grid-area: footer;
+  background-color: #39a2e8;
+  text-align: center;
+}
+
+.footer .pie {
+  /*padding*/
+  padding: 30px;
+  color: white;
+}
+
+.footer .pie__icon--sm {
+  /*size*/
+  width: 30px;
+  /*ancho*/
+}
+
+.footer .pie__titulo--md {
+  /*display*/
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 2rem;
+}
+
+.footer .pie a {
+  text-decoration: none;
+}
+
+h3 {
+  text-align: center;
+  padding: 0%;
+  font-size: 2rem;
+  color: #38c596;
+}
+
+h3 a img {
+  display: block;
+  margin: auto;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    height: 20vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .logo {
+    width: 100px;
+    height: 100px;
+    background-color: #39a2e8;
+  }
+  header .nav-container {
+    height: 40%;
+    width: 100%;
+    background-color: #39a2e8;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+/*# sourceMappingURL=styles.css.map */
